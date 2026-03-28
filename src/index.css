@@ -1,0 +1,26 @@
+@media screen and (max-width:768px) {
+  .player {
+    padding: 10px !important;
+  }
+  .player p {
+    font-size: 1.2em !important;
+  }
+}
+
+* {
+    scrollbar-width: none;
+}
+.navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
