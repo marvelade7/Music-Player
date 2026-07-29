@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Hero.css'
 import heroImg from '../assets/images/hero-img.png'
 import Navbar from './Navbar'
 
+// add a serch bar in the hero
+// fix the nav bar
 
-const Hero = ({ scrollToSongs }) => {
+const Hero = ({ scrollToSongs, search }) => {
+
     return (
         <>
             <header className='header'>
@@ -14,6 +17,7 @@ const Hero = ({ scrollToSongs }) => {
                         <h2 className='mb-4'>Good <span>Music. </span> Better Vibes.</h2>
                         <p className='m-0 fs-5'>Discover and play gospel songs that uplift your mood anytime.</p>
                         <button onClick={scrollToSongs} className='btn btn-warning my-5 py-2 px-4 w-auto fw-semibold'>Start Listening <i className="bi bi-music-note-beamed"></i></button>
+                        <input onChange={(e) => setSearch(e.target.value)} type="text" placeholder='Search by song name, artist, genre etc' />
                     </div>
                     <img src={heroImg} alt="" />
                 </div>
